@@ -13,7 +13,7 @@ fn parse_args() -> Result<Args, lexopt::Error> {
                 thing = Some(val.string()?);
             }
             Long("help") => {
-                println!("Usage: shouty [-n|--number=NUM] [--shout] THING");
+                println!("Usage: shouty [--shout] THING");
                 std::process::exit(0);
             }
             _ => return Err(arg.unexpected()),
